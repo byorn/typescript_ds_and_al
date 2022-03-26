@@ -1,7 +1,36 @@
 "use strict";
-// Calling a Simple function
-const add = (a: number, b:number):number => {
+
+// primitive types
+export const add = (a: number, b:number):number => {
     return a + b;
 }
 
-export default add;
+
+// array type
+export const printArray = (colors: string[]):string=> {
+
+    return colors.join(" ");
+    
+}
+
+// object literal
+export const myObject: { x: number} = {
+    x:100
+}
+
+
+// class types
+export class Vehicle {
+    id:number;
+    constructor(id:number) {
+        this.id = id;
+    }
+
+    getId():string {
+        return this.id.toLocaleString();
+    }
+}
+
+
+
+
