@@ -1,4 +1,4 @@
-import { runFuncAndThrowError, checkDestructuring, checkArrays }  from '../second_example'
+import { runFuncAndThrowError, checkDestructuring, checkArrays }  from '../2_arrays'
 
 describe('testing round 2', ()=>{
 

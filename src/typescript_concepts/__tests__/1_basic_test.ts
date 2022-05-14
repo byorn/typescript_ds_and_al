@@ -1,4 +1,4 @@
-import { add, printArray, Vehicle }  from '../first_example'
+import { add, printArray, Vehicle }  from '../1_basic'
 
 describe('testing for the first time', ()=>{
 
