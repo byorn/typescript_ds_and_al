@@ -1,8 +1,12 @@
 const cyclicArray=(A:number[], K:number):Array<number>=>{
 
-    const numberToShift = A.length-K;
+    const numberToShift = Math.abs(A.length-K);
 
     const answer:Array<number> = []; 
+
+    if(numberToShift>=A.length){
+        return A;
+    }
 
     for(let i:number=numberToShift;i<A.length;i++){
         answer.push(A[i]);
