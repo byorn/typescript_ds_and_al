@@ -1,5 +1,4 @@
-import jest from 'jest';
-import { binarySearchIterative, binarySearchRecursive } from '../binarySearch';
+import { binarySearchIterative } from '../binarySearch';
 
 describe('binary search', ()=>{
 
