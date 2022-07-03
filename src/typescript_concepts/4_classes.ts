@@ -40,3 +40,19 @@ export class Petrol extends EnergySource{
 
  }
 
+
+ export class CheckGetterAndSetter {
+    private name: string = "byorn";
+
+    constructor(public age: number) {
+    }
+
+    get colorOfMyNaME(){
+        return 'BROWN' + this.name;
+    }
+
+    printAge(){
+        console.log(this.age);
+    }
+ }
+

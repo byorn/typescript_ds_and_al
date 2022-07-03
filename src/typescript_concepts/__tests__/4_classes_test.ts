@@ -1,4 +1,4 @@
-import { EnergySource, Petrol } from "../4_classes";
+import {CheckGetterAndSetter, EnergySource, Petrol} from "../4_classes";
 
 describe ('test inheritance', () =>{
 
@@ -8,6 +8,15 @@ describe ('test inheritance', () =>{
         petrol.produceEnergy();
         petrol.childCanOverride();
 
+    })
+
+    test('test getters and setters', ()=>{
+
+        const c = new CheckGetterAndSetter(2);
+        // console.log(c.name);
+        console.log(c.colorOfMyNaME);
+
+        c.printAge();
     })
 
 })
