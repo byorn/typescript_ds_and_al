@@ -30,6 +30,11 @@ export const checkArrays=()=>{
     //can maintain the type in the order of array
     //below is a tuple
     const dog:[string, number, Date] = ["sophie",14,new Date()];
-    
+
+    type MyTuple = [Date, number, string];
+    let myArray = [new Date, 1, "byorn"] as MyTuple;
+
+    // const x:number = myArray[0] will throw an type error
+    console.log(myArray[0] as Date);
 }
 

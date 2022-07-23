@@ -20,6 +20,19 @@ describe('testing for the first time', ()=>{
         expect(car.getId()).toBe('4,000');
     });
 
+    test ('testing type assertion, ', () => {
+
+        type MyType=string|number;
+
+        var abc = 'abc';
+
+        const derive = abc as MyType;
+
+        console.log(derive);
+
+    })
+
 });
 
 });
+
