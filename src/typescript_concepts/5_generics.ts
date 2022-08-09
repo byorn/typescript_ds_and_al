@@ -14,7 +14,7 @@ interface Drivable {
 
 
 export function driveAllObjects<T extends Drivable>(arr: T[]):void {
-    arr.forEach((a:T, index:number)=>{
+    arr.forEach((a:T)=>{
         a.drive();
     })
 }
