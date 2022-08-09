@@ -10,11 +10,12 @@ describe('test linked list', ()=>{
 
         const n1 = new Node("einstein");
         ll.add(n1);
-        ll.print();
+        console.log(ll.print());
 
         ll.delete();
 
-        ll.print();
-
+        console.log(ll.print());
+        ll.delete();
+        console.log(ll.print());
     });
 })

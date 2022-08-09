@@ -20,14 +20,14 @@ export class LinkedList{
     }
 
 
-    print(){
+    print():string{
         let currentNode:Node | null = this.head;
         let str = '';
         while(currentNode!=null){
-            str += currentNode.value + '->';
+            str += currentNode.value + ',';
             currentNode = currentNode.next;
         }
-        str+='null';
-        console.log(str);
+        str+='';
+        return str;
     }
 }

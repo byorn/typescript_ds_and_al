@@ -7,3 +7,14 @@ export class MyGeneric<T>{
         console.log(this.myData);
     }
 }
+
+interface Drivable {
+    drive():void
+}
+
+
+export function driveAllObjects<T extends Drivable>(arr: T[]):void {
+    arr.forEach((a:T, index:number)=>{
+        a.drive();
+    })
+}
