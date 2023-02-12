@@ -1,4 +1,12 @@
 import {Node} from './Node'
+
+/**
+ * You add a Node to the top of the Head
+ *
+ * The current node being added Next will pont to the previous head.
+ *
+ * And the current Node will be the head.
+ */
 export class LinkedList{
 
     public size:number=0;
