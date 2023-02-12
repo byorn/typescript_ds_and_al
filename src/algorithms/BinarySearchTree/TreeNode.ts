@@ -25,7 +25,59 @@ class TreeNode {
             }
         }
     }
+
+    traverseInorder():string {
+            let inOrderStr = '';
+            //left
+            if( this.leftNode != null ){
+                inOrderStr +=this.leftNode.traverseInorder();
+            }
+            //root
+            inOrderStr += ", " + this.treeNodeValue;
+            //right
+            if ( this.rightNode != null ) {
+                inOrderStr += this.rightNode.traverseInorder();
+            }
+            return inOrderStr;
+    }
+
+    traversePreOrder():string {
+        let str = '';
+
+        //root
+        str += ", " + this.treeNodeValue;
+
+        //left
+        if( this.leftNode != null ){
+            str +=this.leftNode.traversePreOrder();
+        }
+        //right
+        if ( this.rightNode != null ) {
+            str += this.rightNode.traversePreOrder();
+        }
+        return str;
+    }
+
+    traversePostOrder():string {
+        let str = '';
+
+        //left
+        if( this.leftNode != null ){
+            str +=this.leftNode.traversePostOrder();
+        }
+
+        //right
+        if ( this.rightNode != null ) {
+            str += this.rightNode.traversePostOrder();
+        }
+
+        //root
+        str += ", " + this.treeNodeValue;
+        return str;
+    }
 }
+
+export default TreeNode;
 
 
 

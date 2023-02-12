@@ -45,8 +45,13 @@ Advantages
 4) insertioin and reading the tree is of OlogN
 
  */
+import TreeNode from "./TreeNode";
+
 class Tree {
-    constructor(public rootNode:TreeNode) {
+
+    rootNode: TreeNode | null;
+    constructor() {
+        this.rootNode = null;
     }
 
     insert(value: number){
@@ -56,4 +61,17 @@ class Tree {
             this.rootNode.insert(value);
         }
     }
+
+    traverseInorder():string | undefined{
+        return this.rootNode?.traverseInorder();
+    }
+
+    traversePreOrder():string | undefined{
+        return this.rootNode?.traversePreOrder();
+    }
+    traversePostOrder():string | undefined{
+        return this.rootNode?.traversePostOrder();
+    }
 }
+
+export default Tree;
