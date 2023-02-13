@@ -26,6 +26,38 @@ class TreeNode {
         }
     }
 
+    get(searchValue:number):number | null{
+        if(searchValue === this.treeNodeValue){
+            return this.treeNodeValue;
+        }
+        if(searchValue < this.treeNodeValue){
+            if(this.leftNode != null){
+                return this.leftNode.get(searchValue);
+            }
+        }else{
+            if(this.rightNode !=null){
+                return this.rightNode.get(searchValue);
+            }
+        }
+        return null;
+    }
+
+    min():number {
+        if(this.leftNode == null){
+            return this.treeNodeValue;
+        }else{
+            return this.leftNode.min();
+        }
+    }
+
+    max():number {
+        if(this.rightNode == null){
+            return this.treeNodeValue;
+        }else{
+            return this.rightNode.max();
+        }
+    }
+
     traverseInorder():string {
             let inOrderStr = '';
             //left

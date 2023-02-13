@@ -55,7 +55,7 @@ class Tree {
     }
 
     insert(value: number){
-        if(this.rootNode == null){
+        if(this.rootNode === null){
             this.rootNode = new TreeNode(value);
         } else {
             this.rootNode.insert(value);
@@ -71,6 +71,74 @@ class Tree {
     }
     traversePostOrder():string | undefined{
         return this.rootNode?.traversePostOrder();
+    }
+
+    get(searchValue:number):number | null {
+        if (this.rootNode != null){
+            return this.rootNode.get(searchValue);
+        }else{
+            return null;
+        }
+    }
+
+    min():number | null{
+        if(this.rootNode != null){
+            return this.rootNode.min();
+        }
+        else{
+            return null;
+        }
+    }
+    max():number | null{
+        if(this.rootNode != null){
+            return this.rootNode.max();
+        }
+        else{
+            return null;
+        }
+    }
+
+    /**
+     * delete only if the node is a leaf or has only 1 child.
+     * if it has two chilren, then do not delete it.
+     * @param valueToDelete
+     *
+     *    10
+     *   /  \
+     *      20
+     *
+     *  delete either 10 or 20
+     */
+    delete(valueToDelete:number):void{
+        if(this.rootNode != null ) {
+            this.rootNode = this.replaceSubTreeNode(this.rootNode, valueToDelete);
+        }
+    }
+    replaceSubTreeNode(subTreeNode:TreeNode | null, valueToDelete:number): TreeNode | null  {
+        //if the leaf is null, then return the null back
+        if (subTreeNode == null){
+            return subTreeNode;
+        }
+
+        if (valueToDelete < subTreeNode.treeNodeValue){
+            subTreeNode.leftNode = this.replaceSubTreeNode (subTreeNode.leftNode, valueToDelete);
+        } else if (valueToDelete > subTreeNode.treeNodeValue) {
+            subTreeNode.rightNode = this.replaceSubTreeNode(subTreeNode.rightNode, valueToDelete);
+        } else {
+            // this is the subtree that has to be deleted.
+
+            // this if statement is for the case that the subtree has 0 or 1 node.
+            if(subTreeNode.leftNode == null){
+                return subTreeNode.rightNode;
+            }else if (subTreeNode.rightNode == null){
+                return subTreeNode.leftNode;
+            }
+
+            // this is the case where the subtree has 2 nodes.
+            subTreeNode.treeNodeValue = subTreeNode.rightNode.min();
+            subTreeNode.rightNode = this.replaceSubTreeNode(subTreeNode.rightNode, subTreeNode.rightNode.min());
+        }
+        return subTreeNode;
     }
 }
 
