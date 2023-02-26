@@ -15,7 +15,7 @@ export const printVehicle = (vehicle: Vehicle):void => {
     console.log(`vehicle manufacture date :${vehicle.manufacturedDate}`)
     console.log(`vehicle broken :${vehicle.broken}`)
     console.log(`vehicle calculated value :${vehicle.calculate()}`)
-    
+
 }
 
 

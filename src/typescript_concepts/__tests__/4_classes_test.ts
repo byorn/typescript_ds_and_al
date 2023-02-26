@@ -7,7 +7,7 @@ describe ('test inheritance', () =>{
         const petrol = new Petrol("Liquid Petrol");
         petrol.produceEnergy();
         petrol.childCanOverride();
-
+        
     })
 
     test('test getters and setters', ()=>{
