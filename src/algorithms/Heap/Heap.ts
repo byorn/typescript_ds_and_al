@@ -1,4 +1,6 @@
 /* this is a Max Heap */
+/* Why  ? You use a heap only when you interested in the minimum or maximum value of a dataset */
+/* When implementing a Priority Queue eg. hospital. the highest priority wil always be at the root */
 /*
 Root value is Greater than or equal to its children
 
@@ -160,6 +162,17 @@ class Heap {
         this.heapArray.pop();
 
         return itemToDelete;
+    }
+
+    /*
+    Return the root of the Heap. Generally when deleting, also we delete from the root.
+    Otherwise we have to do a linear search to find the index and pass it to the delete function.
+     */
+    peek():number{
+        if(this.isEmpty()){
+            throw Error("Heap is empty");
+        }
+        return this.heapArray[0];
     }
 
 }

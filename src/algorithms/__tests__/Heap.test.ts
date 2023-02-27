@@ -37,6 +37,7 @@ describe(`Test Heap implementation`, ()=> {
         ])
 
 
+        expect(h.peek()).toEqual(80);
     });
 
     test('Should delete the root correctly', () => {
