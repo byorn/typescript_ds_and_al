@@ -1,5 +1,5 @@
 /** stack backed by linked list **/
-import {LinkedList} from "./LinkedList/LinkedList";
+import { LinkedList } from "./LinkedList/LinkedList";
 import {Node} from "./LinkedList/Node";
 
 export class Stack {
@@ -8,6 +8,7 @@ export class Stack {
 
     constructor() {
         this.items=new LinkedList();
+        
     }
 
     push(item: string){

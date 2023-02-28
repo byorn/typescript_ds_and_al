@@ -54,9 +54,6 @@ so we replace with 19 the right child, and we continue heapifying downwards.
 
 */
 
-
-import * as repl from "repl";
-
 class Heap {
     heapArray:number[] = [];
 
@@ -173,6 +170,25 @@ class Heap {
             throw Error("Heap is empty");
         }
         return this.heapArray[0];
+    }
+
+    sort() {
+        const root = this.peek();
+        const lastLeaf  = this.heapArray[this.heapArray.length - 1];
+        const tmp = root;
+        this.heapArray[0] = lastLeaf;
+        this.heapArray[this.heapArray.length - 1] = tmp;
+        let lastMax = 1;
+
+        while(0 <= this.heapArray.length - 1 - lastMax) {
+            this.fixHeapBelow(0, this.heapArray.length - 1 - lastMax)
+            const lastLeaf1 = this.heapArray[this.heapArray.length - 1 - lastMax];
+            const root1 = this.peek();
+            const tmp1 = root1;
+            this.heapArray[0] = lastLeaf1;
+            this.heapArray[this.heapArray.length - 1 - lastMax] = tmp1;
+            lastMax++;
+        }
     }
 
 }
