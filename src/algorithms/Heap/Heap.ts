@@ -190,7 +190,6 @@ class Heap {
             lastMax++;
         }
     }
-
 }
 
 export default Heap;
