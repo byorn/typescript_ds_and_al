@@ -33,28 +33,31 @@
  *
  */
 
-export const graphDFS = (graph:any, start: string):string => {
+export const graphDFS = (graph:Record<string, Array<string>>, start: string):string => {
     let outputStr = '';
 
     let stack = [start];
     while (stack.length > 0){
         let poped = stack.pop() as string;
+        //traversed
         outputStr+=poped+",";
-        let neighbours:[] = graph[poped];
+        let neighbours:string[] = graph[poped];
         neighbours.forEach(n => stack.push(n));
     }
 
     return outputStr;
 }
 
-export const graphBFS = (graph:any, start: string):string => {
+export const graphBFS = (graph:Record<string, Array<string>>, start: string):string => {
     let outputStr = '';
 
     let queue = [start];
     while (queue.length > 0){
+        // [1,2,3] shift, will remove 1. and will mark as travered as added to outputStr
         let shifted = queue.shift() as string;
+        // queue, removed, has been traveresed
         outputStr+=shifted+",";
-        let neighbours:[] = graph[shifted];
+        let neighbours:string[] = graph[shifted];
         neighbours.forEach(n => queue.push(n));
     }
 

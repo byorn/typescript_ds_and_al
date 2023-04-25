@@ -5,7 +5,7 @@ describe(`Test graph  implementation`, ()=> {
 
     test('Should traverse a graph DFS', () => {
 
-        const graph = {
+        const graph: Record<string, Array<string>> = {
             a: ['b', 'c'],
             b: ['f', 'e', 'd'],
             c: ['g'],
@@ -23,7 +23,7 @@ describe(`Test graph  implementation`, ()=> {
     });
 
     test('Should traverse a graph BFS', () => {
-        const graph = {
+        const graph: Record<string, Array<string>> = {
             a: ['b', 'c'],
             b: ['f', 'e', 'd'],
             c: ['g'],
