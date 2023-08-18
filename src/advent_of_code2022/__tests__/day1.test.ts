@@ -1,12 +1,13 @@
 // for a given file, spearated by a line space. find the largest amount
 import { readFile } from '../common/FileReader';
-import {getElfThatCarriesMaxiumCalories} from "../AdventOfCodePuzzle1";
+import {getElfThatCarriesMaxiumCalories} from "../day1";
 
 describe('Elf who carries most of the calories', ()=>{
 
     test('Should return an array of records in a file', async () => {
 
-        const lines:string[] = await readFile(`${__dirname}/resources/AdventOfCodePuzzle1.txt`);
+
+        const lines:string[] = await readFile(`${__dirname}/resources/day1.txt`);
         expect(lines.length).toBeGreaterThan(0);
 
     });
@@ -34,7 +35,7 @@ describe('Elf who carries most of the calories', ()=>{
 
     test('Should print the Elf number who carries the maxium amount of calories', async () => {
 
-        const lines:string[] = await readFile(`${__dirname}/resources/AdventOfCodePuzzle1.txt`);
+        const lines:string[] = await readFile(`${__dirname}/resources/day1.txt`);
         const elfNumber: number = getElfThatCarriesMaxiumCalories(lines);
         expect(elfNumber).toEqual(72478);
     });

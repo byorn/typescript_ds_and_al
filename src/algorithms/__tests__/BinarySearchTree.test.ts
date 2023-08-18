@@ -23,8 +23,7 @@ describe('BST', ()=>{
             bst.insert(value);
         })
 
-        console.log(bst.traversePreOrder())
-        expect(bst.traverseInorder()).toBe(', 25, 20, 15, 22, 27, 26, 30, 29, 32');
+        expect(bst.traversePreOrder()).toBe(', 25, 20, 15, 22, 27, 26, 30, 29, 32');
 
     })
 

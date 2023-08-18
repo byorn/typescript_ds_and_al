@@ -8,7 +8,7 @@ const Palindrome = (strText: string): boolean => {
     for(let j = strText.length-1; j>strText.length/2-1; j--) {
         secondHalf += strText[j];
     }
-    console.log(secondHalf);
+
     return firstHalf === secondHalf;
 }
 
