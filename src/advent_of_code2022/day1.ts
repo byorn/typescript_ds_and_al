@@ -1,4 +1,4 @@
-export const getElfThatCarriesMaxiumCalories = (reindeers: string[]):number => {
+export const getMaxInGroup = (reindeers: string[]):number => {
 
     let maximumCalories:number = 0;
     let currentTotalReindeerCalories: number = 0;
