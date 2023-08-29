@@ -17,6 +17,7 @@ export const getMaxInGroup = (reindeers: string[]):number => {
                     maximumCalories  = currentTotalReindeerCalories;
                 }
             }
+
         }
     }
 
