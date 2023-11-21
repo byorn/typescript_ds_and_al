@@ -6,6 +6,8 @@ import {Node} from './Node'
  * The current node being added Next will pont to the previous head.
  *
  * And the current Node will be the head.
+ * head
+ * [4] [5]
  */
 export class LinkedList{
 

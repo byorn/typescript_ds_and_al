@@ -12,10 +12,13 @@ describe('test linked list', ()=>{
         ll.add(n1);
         console.log(ll.print());
 
-        ll.delete();
-
-        console.log(ll.print());
-        ll.delete();
-        console.log(ll.print());
+       n.print()
+        n1.print()
+        ll.head?.print()
+        // ll.delete();
+        //
+        // console.log(ll.print());
+        // ll.delete();
+        // console.log(ll.print());
     });
 })

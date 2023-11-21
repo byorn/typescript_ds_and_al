@@ -4,4 +4,8 @@ export class Node {
         this.next=null;
     }
 
+    print(){
+        console.log(`next: ${this.next?.value} | value: ${this.value}`)
+    }
+
 }
