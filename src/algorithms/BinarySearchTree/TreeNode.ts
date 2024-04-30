@@ -7,6 +7,7 @@ class TreeNode {
         this.rightNode = null;
     }
 
+    /** This is a binary search tree **/
     insert(value:number) :void{
         if( this.treeNodeValue == null){
             this.treeNodeValue = value;

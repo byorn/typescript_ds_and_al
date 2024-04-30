@@ -36,6 +36,7 @@ describe('BST', ()=>{
         })
 
         console.log(bst.traversePostOrder())
+
         expect(bst.traversePostOrder()).toBe(', 15, 22, 20, 26, 29, 32, 30, 27, 25');
 
     });
