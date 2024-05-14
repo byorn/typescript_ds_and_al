@@ -43,6 +43,7 @@ export const graphDFS = (graph:Record<string, Array<string>>, start: string):str
         outputStr+=poped+",";
         let neighbours:string[] = graph[poped];
         neighbours.forEach(n => stack.push(n));
+
     }
 
     return outputStr;
